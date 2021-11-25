@@ -2,13 +2,11 @@
 import React from "react";
 //Base import for the main .js in the project
 import reactDom from "react-dom";
-import { Typography } from "@mui/material";
-import SignIn from "./login";
 //This function is a React Component, all components functions need to start with captilized letter
 function Greeting() {
   //Every component should return some JSX, basically the React Html
   return (
-     <SignIn></SignIn> 
+    <h1>Home</h1>
   );
 }
 
