@@ -1,0 +1,21 @@
+.cardsContainer {
+    padding: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .cardsContainer {
+        padding: 20px;
+    }
+    .cards {
+        padding: 20px;
+    }
+}
