@@ -8,6 +8,7 @@ import MarkUnreadChatAlt from "@mui/icons-material/MarkUnreadChatAlt";
 import FactCheck from "@mui/icons-material/FactCheck";
 import Card from "./Card";
 import "./style/home.css";
+import Graph from "./Graph";
 
 export default function Home() {
   const mdIcon = {
@@ -37,6 +38,7 @@ export default function Home() {
           ></Card>
         </Grid>
       </Grid>
+      <Graph></Graph>
     </Container>
   );
 }
