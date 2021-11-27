@@ -15,7 +15,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HomeIcon from "@mui/icons-material/Home";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import QuizIcon from "@mui/icons-material/Quiz";
-import Copyright from "../copyright";
+import Copyright from "../Copyright";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
