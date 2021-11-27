@@ -11,9 +11,10 @@ import Home from "./main_page/Home";
 export default function App() {
   //Every component should return some JSX, basically the React Html
   return (
-    <Container>
+    <div>
+      <Navbar></Navbar>
       <Home></Home>
-    </Container>
+    </div>
   );
 }
 

@@ -1,13 +1,14 @@
 import React from "react";
 import Calendar from "./Calendar";
-import Navbar from "../global/navbar/Navbar";
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import { Box } from "@mui/system";
 
 export default function Home() {
   return (
-    <Container>
-      <Navbar></Navbar>
-      <Calendar></Calendar>
-    </Container>
+    <Grid container xs={{ flexWrap: "wrap" }} spacing='2'>
+      <Grid item md='12' lg='6'>
+        <Calendar></Calendar>
+      </Grid>
+    </Grid>
   );
 }
