@@ -1,0 +1,25 @@
+.forumCard {
+    padding: 6px;
+}
+
+.forumCard .paper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .forumCard {
+        padding: 20px;
+    }
+    .forumCard .paper {
+        justify-content: space-around;
+    }
+}
+
+.dateBox {
+    display: flex;
+    flex-direction: column;
+}
