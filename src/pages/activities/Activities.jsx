@@ -13,11 +13,11 @@ export default function Tests() {
     "Filosofia",
   ];
   return (
-    <Container maxWidth='false'>
+    <div>
       <h1 sx={{ textAlign: "center" }}>Atividades</h1>
       {courseList.map((course) => {
         return <GridAccordion course={course}></GridAccordion>;
       })}
-    </Container>
+    </div>
   );
 }

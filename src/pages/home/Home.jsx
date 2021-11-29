@@ -1,6 +1,6 @@
 import React from "react";
 import Calendar from "./Calendar";
-import { Container, Grid, Paper } from "@mui/material";
+import { Container, Divider, Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import PendingActions from "@mui/icons-material/PendingActions";
 import Quiz from "@mui/icons-material/Quiz";
@@ -18,7 +18,18 @@ export default function Home() {
   };
 
   return (
-    <Container maxWidth='false'>
+    <div>
+      <Container maxWidth='false' className='topTitle'>
+        <Typography className='titleText' variant='h3'>
+          Onsular
+        </Typography>
+        <Typography className='titleSubtext' variant='h6'>
+          Seu mundo acadêmico em apenas um lugar
+        </Typography>
+        <br></br>
+        <Divider></Divider>
+      </Container>
+
       <Grid container>
         <Grid className='calendarContainer' item xs='12' lg='6'>
           <Calendar></Calendar>
@@ -30,11 +41,14 @@ export default function Home() {
             name='Atividades'
             icon={<PendingActions sx={mdIcon}></PendingActions>}
           ></Card>
+
           <Card name='Provas' icon={<Quiz sx={mdIcon}></Quiz>}></Card>
+
           <Card
             name='Fórum'
             icon={<MarkUnreadChatAlt sx={mdIcon}></MarkUnreadChatAlt>}
           ></Card>
+
           <Card
             name='Resultados'
             icon={<FactCheck sx={mdIcon}></FactCheck>}
@@ -68,6 +82,7 @@ export default function Home() {
             "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           ]}
         ></ForumsCardGroup>
+
         <ForumsCardGroup
           title='Comissão de formatura'
           avatarList={[
@@ -80,6 +95,6 @@ export default function Home() {
           lastMessageDate='21/12/2021'
         ></ForumsCardGroup>
       </Grid>
-    </Container>
+    </div>
   );
 }

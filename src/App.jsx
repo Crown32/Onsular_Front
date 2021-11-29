@@ -14,11 +14,14 @@ import Tests from "./pages/tests/Tests";
 export default function App() {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
   const lightTheme = createTheme({ palette: { mode: "light" } });
+  const appContainer = {};
 
   return (
     <ThemeProvider theme={lightTheme}>
       <Navbar></Navbar>
-      <Tests></Tests>
+      <Container sx={appContainer} maxWidth='xl'>
+        <Home></Home>
+      </Container>
     </ThemeProvider>
   );
 }

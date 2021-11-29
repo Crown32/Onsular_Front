@@ -10,3 +10,15 @@
 .forumCardsGrid {
     background-color: blue;
 }
+
+.topTitle {
+    margin-bottom: 40px;
+}
+
+.topTitle .titleText {
+    margin-left: 15px;
+}
+
+.topTitle .titleSubtext {
+    margin-left: 35px;
+}

@@ -13,11 +13,11 @@ export default function Activities() {
     "Filosofia",
   ];
   return (
-    <Container maxWidth='false'>
+    <div>
       <h1 sx={{ textAlign: "center" }}>Provas</h1>
       {courseList.map((course) => {
         return <GridAccordion course={course}></GridAccordion>;
       })}
-    </Container>
+    </div>
   );
 }
