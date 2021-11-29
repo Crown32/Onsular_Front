@@ -4,10 +4,10 @@ import { Container } from "@mui/material";
 import React from "react";
 //Base import for the main .js in the project
 import Navbar from "./global/navbar/Navbar";
-import Login from "./logins/Login";
-import Register from "./logins/Register";
-import Calendar from "./main_page/Calendar";
-import Home from "./main_page/Home";
+import Login from "./pages/logins/Login";
+import Register from "./pages/logins/Register";
+import Calendar from "./pages/home/Calendar";
+import Home from "./pages/home/Home";
 //This function is a React Component, all components functions need to start with captilized letter
 export default function App() {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
