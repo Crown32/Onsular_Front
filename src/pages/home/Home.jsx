@@ -11,6 +11,7 @@ import "./style/home.css";
 import Graph from "./Graph";
 import ForumsCardPersonal from "./forum/ForumCardsPersonal";
 import ForumsCardGroup from "./forum/ForumCardsGroup";
+import Navbar from "../../global/navbar/Navbar";
 
 export default function Home() {
   const mdIcon = {
@@ -39,16 +40,23 @@ export default function Home() {
           <Card
             name='Atividades'
             icon={<PendingActions sx={mdIcon}></PendingActions>}
+            link='/activities'
           ></Card>
 
-          <Card name='Provas' icon={<Quiz sx={mdIcon}></Quiz>}></Card>
+          <Card
+            link='/tests'
+            name='Provas'
+            icon={<Quiz sx={mdIcon}></Quiz>}
+          ></Card>
 
           <Card
+            link='/'
             name='Fórum'
             icon={<MarkUnreadChatAlt sx={mdIcon}></MarkUnreadChatAlt>}
           ></Card>
 
           <Card
+            link='/'
             name='Resultados'
             icon={<FactCheck sx={mdIcon}></FactCheck>}
           ></Card>

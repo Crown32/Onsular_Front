@@ -12,6 +12,7 @@ import Activities from "./pages/activities/Activities";
 import Tests from "./pages/tests/Tests";
 import Footer from "./global/Footer";
 import Router from "./Router";
+import { Outlet } from "react-router";
 
 //This function is a React Component, all components functions need to start with captilized letter
 export default function App() {
@@ -21,21 +22,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      {window.location.href.includes("login") |
-      window.location.href.includes("register") ? (
-        ""
-      ) : (
-        <Navbar></Navbar>
-      )}
+      <Navbar></Navbar>
       <Container sx={appContainer} maxWidth='xl'>
-        <Router></Router>
+        <Outlet></Outlet>
       </Container>
-      {window.location.href.includes("login") |
-      window.location.href.includes("register") ? (
-        ""
-      ) : (
-        <Footer></Footer>
-      )}
+      <Footer></Footer>
     </ThemeProvider>
   );
 }

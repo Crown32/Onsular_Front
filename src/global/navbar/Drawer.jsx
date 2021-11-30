@@ -14,6 +14,7 @@ import QuizIcon from "@mui/icons-material/Quiz";
 import Copyright from "../Copyright";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
+import { Link } from "react-router-dom";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -41,6 +42,11 @@ export default function TemporaryDrawer() {
     right: "0",
   };
 
+  const linkStyle = {
+    color: "black",
+    textDecoration: "none",
+  };
+
   const list = (anchor) => (
     <Box
       sx={{
@@ -53,47 +59,59 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key='Home'>
-          <ListItemIcon>
-            <HomeIcon></HomeIcon>
-          </ListItemIcon>
-          <ListItemText primary='Home' />
-        </ListItem>
+        <Link to='/'>
+          <ListItem button key='Home'>
+            <ListItemIcon>
+              <HomeIcon></HomeIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Home' />
+          </ListItem>
+        </Link>
 
-        <ListItem button key='Atividades'>
-          <ListItemIcon>
-            <PendingActionsIcon></PendingActionsIcon>
-          </ListItemIcon>
-          <ListItemText primary='Atividades' />
-        </ListItem>
+        <Link to='/activities'>
+          <ListItem button key='Atividades'>
+            <ListItemIcon>
+              <PendingActionsIcon></PendingActionsIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Atividades' />
+          </ListItem>
+        </Link>
 
-        <ListItem button key='Provas'>
-          <ListItemIcon>
-            <QuizIcon></QuizIcon>
-          </ListItemIcon>
-          <ListItemText primary='Provas' />
-        </ListItem>
+        <Link to='/tests'>
+          <ListItem button key='Provas'>
+            <ListItemIcon>
+              <QuizIcon></QuizIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Provas' />
+          </ListItem>
+        </Link>
 
-        <ListItem button key='Fórum'>
-          <ListItemIcon>
-            <MarkUnreadChatAltIcon></MarkUnreadChatAltIcon>
-          </ListItemIcon>
-          <ListItemText primary='Fórum' />
-        </ListItem>
+        <Link to='/'>
+          <ListItem button key='Fórum'>
+            <ListItemIcon>
+              <MarkUnreadChatAltIcon></MarkUnreadChatAltIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Fórum' />
+          </ListItem>
+        </Link>
 
-        <ListItem button key='Resultados'>
-          <ListItemIcon>
-            <FactCheckIcon></FactCheckIcon>
-          </ListItemIcon>
-          <ListItemText primary='Resultados' />
-        </ListItem>
+        <Link to='/'>
+          <ListItem button key='Resultados'>
+            <ListItemIcon>
+              <FactCheckIcon></FactCheckIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Resultados' />
+          </ListItem>
+        </Link>
 
-        <ListItem button key='Sair'>
-          <ListItemIcon>
-            <LogoutIcon></LogoutIcon>
-          </ListItemIcon>
-          <ListItemText primary='Sair' />
-        </ListItem>
+        <Link to='/login'>
+          <ListItem button key='Sair'>
+            <ListItemIcon>
+              <LogoutIcon></LogoutIcon>
+            </ListItemIcon>
+            <ListItemText sx={linkStyle} primary='Sair' />
+          </ListItem>
+        </Link>
       </List>
     </Box>
   );

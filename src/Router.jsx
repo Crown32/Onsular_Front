@@ -4,16 +4,20 @@ import Login from "./pages/logins/Login";
 import Activities from "./pages/activities/Activities";
 import Tests from "./pages/tests/Tests";
 import Register from "./pages/logins/Register";
+import Navbar from "./global/navbar/Navbar";
+import App from "./App";
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<App />}>
+          <Route path='/' element={<Home />} />
 
-        <Route path='/activities' element={<Activities />} />
+          <Route path='activities' element={<Activities />} />
 
-        <Route path='/tests' element={<Tests />} />
+          <Route path='tests' element={<Tests />} />
+        </Route>
 
         <Route path='/register' element={<Register />} />
 

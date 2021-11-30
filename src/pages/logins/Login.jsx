@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
+import { Link as LinkRouter } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -75,14 +76,17 @@ export default function SignIn() {
               control={<Checkbox value='remember' color='primary' />}
               label='Lembrar login'
             />
-            <Button
-              type='submit'
-              fullWidth
-              variant='contained'
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Entrar{" "}
-            </Button>{" "}
+            <LinkRouter to='/'>
+              {" "}
+              <Button
+                type='submit'
+                fullWidth
+                variant='contained'
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Entrar{" "}
+              </Button>
+            </LinkRouter>
             <Grid container>
               <Grid item xs>
                 <Link href='#' variant='body2'>
@@ -90,10 +94,12 @@ export default function SignIn() {
                 </Link>{" "}
               </Grid>{" "}
               <Grid item>
-                <Link href='#' variant='body2'>
-                  {" "}
-                  {"Não possui uma conta? Registre-se"}{" "}
-                </Link>{" "}
+                <LinkRouter to='/register'>
+                  <Link href='#' variant='body2'>
+                    {" "}
+                    {"Não possui uma conta? Registre-se"}{" "}
+                  </Link>
+                </LinkRouter>{" "}
               </Grid>{" "}
             </Grid>{" "}
           </Box>{" "}
