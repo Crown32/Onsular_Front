@@ -22,3 +22,19 @@ body {
 a {
     text-decoration: none;
 }
+
+.str-chat-channel-list,
+.str-chat-channel {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.str-chat__container {
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.str-chat,
+.str-chat__channel-list-messenger {
+    border-radius: 10px;
+}
