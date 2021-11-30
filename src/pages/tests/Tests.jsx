@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Typography, Divider, Alert } from "@mui/material";
 import * as React from "react";
 import GridAccordion from "./GridAccordion";
 
@@ -14,7 +14,29 @@ export default function Activities() {
   ];
   return (
     <div>
-      <h1 sx={{ textAlign: "center" }}>Provas</h1>
+      <Container
+        sx={{
+          margin: "40px 0",
+        }}
+        maxWidth='xl'
+      >
+        <Typography
+          sx={{
+            marginLeft: "15px",
+          }}
+          variant='h4'
+        >
+          Provas
+        </Typography>
+        <br></br>
+        <Divider></Divider>
+        <br></br>
+        <Alert severity='warning'>
+          <Typography>
+            Muitas provas acumuladas, se empenhe em finaliza-las!
+          </Typography>
+        </Alert>
+      </Container>
       {courseList.map((course) => {
         return <GridAccordion course={course}></GridAccordion>;
       })}

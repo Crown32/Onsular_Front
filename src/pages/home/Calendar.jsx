@@ -42,7 +42,13 @@ function App() {
     { title: "Capitalismo...", date: "2021-11-01" },
     { title: "Forças din...", date: "2021-11-02" },
     { title: "Debate sobr...", date: "2021-11-22" },
+    { title: "Prova geog..", date: "2021-11-12" },
+    { title: "Socialismo...", date: "2021-11-01" },
+    { title: "Efeitos sub...", date: "2021-11-02" },
+    { title: "Debate sobr...", date: "2021-11-17" },
     { title: "Prova biolog..", date: "2021-11-12" },
+    { title: "Prova progra...", date: "2021-12-10" },
+    { title: "Teste algebra..", date: "2021-12-06" },
   ]);
   const navBar = [
     {
