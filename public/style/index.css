@@ -1,10 +1,12 @@
 /* Estructure formating */
 
 :root {
-    --primary-color: blue;
+    --primary-color: #1976d2;
+    --background-color-light: #f0f7ff;
 }
 
 body {
+    background-color: var(--background-color-light);
     box-sizing: border-box;
     margin: 0;
     padding: 0;

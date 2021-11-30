@@ -3,12 +3,12 @@
 }
 
 .cardsGrid {
-    background-color: blue;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 
 .forumCardsGrid {
-    background-color: blue;
+    background-color: var(--primary-color);
 }
 
 .topTitle {

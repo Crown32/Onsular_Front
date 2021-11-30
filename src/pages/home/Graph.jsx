@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Alert, Container, Divider, Typography } from "@mui/material";
 import React from "react";
 import {
   LineChart,
@@ -13,102 +13,94 @@ import {
 
 const data = [
   {
-    name: "Janeiro",
-    faltas: 4000,
-    pv: 2400,
-    amt: 2400,
+    month: "Janeiro",
+    faltas: 1,
   },
   {
-    name: "Fevereiro",
-    faltas: 3000,
-    pv: 1398,
-    amt: 2210,
+    month: "Fevereiro",
+    faltas: 12,
   },
   {
-    name: "Março",
-    faltas: 2000,
-    pv: 9800,
-    amt: 2290,
+    month: "Março",
+    faltas: 2,
   },
   {
-    name: "Abril",
-    faltas: 2780,
-    pv: 3908,
-    amt: 2000,
+    month: "Abril",
+    faltas: 24,
   },
   {
-    name: "Maio",
-    faltas: 1890,
-    pv: 4800,
-    amt: 2181,
+    month: "Maio",
+    faltas: 4,
   },
   {
-    name: "Junho",
-    faltas: 2390,
-    pv: 3800,
-    amt: 2500,
+    month: "Junho",
+    faltas: 23,
   },
   {
-    name: "Junho",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Junho",
+    faltas: 44,
   },
   {
-    name: "Julho",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Julho",
+    faltas: 13,
   },
 
   {
-    name: "Agosto",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Agosto",
+    faltas: 24,
   },
   {
-    name: "Setembro",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Setembro",
+    faltas: 1,
   },
   {
-    name: "Outubro",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Outubro",
+    faltas: 0,
   },
   {
-    name: "Novembro",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Novembro",
+    faltas: 12,
   },
   {
-    name: "Dezembro",
-    faltas: 3490,
-    pv: 4300,
-    amt: 2100,
+    month: "Dezembro",
+    faltas: 0,
   },
 ];
 
 export default function Graph() {
+  const titleText = {
+    marginLeft: "15px",
+  };
+
+  const title = {
+    marginBottom: "40px",
+  };
+
   return (
-    <Container sx={{ marginTop: "50px", textAlign: "center" }} maxWidth='false'>
-      <h1>Faltas mensais</h1>
-      <br></br>
-      <br></br>
+    <Container sx={{ marginTop: "50px" }} maxWidth='false'>
+      <Container sx={title} maxWidth='xl'>
+        <Typography sx={titleText} variant='h4'>
+          Faltas mensais
+        </Typography>
+        <br></br>
+        <Divider></Divider>
+        <br></br>
+
+        <Alert severity='error'>
+          <Typography>
+            Faltas acima de 20%, você não pode perder mais aulas!
+          </Typography>
+        </Alert>
+      </Container>
       <ResponsiveContainer width='100%' height={400}>
         <LineChart
-          className='graph'
           data={data}
           margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
         >
-          <XAxis dataKey='name' />
+          <XAxis dataKey='month' />
           <Tooltip />
-          <CartesianGrid stroke='#f5f5f5' />
-          <Line type='monotone' dataKey='faltas' stroke='#ff7300' yAxisId={0} />
+          <CartesianGrid stroke='var(--primary-color)' />
+          <Line type='monotone' dataKey='faltas' stroke='red' yAxisId={0} />
         </LineChart>
       </ResponsiveContainer>
     </Container>

@@ -36,7 +36,12 @@ function App() {
   };
 
   const [display, setDisplay] = useState("calendar");
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState([
+    { title: "Capitalismo...", date: "2021-11-01" },
+    { title: "Forças din...", date: "2021-11-02" },
+    { title: "Debate sobr...", date: "2021-11-22" },
+    { title: "Prova biolog..", date: "2021-11-12" },
+  ]);
   const navBar = [
     {
       label: "Calendar",
@@ -64,7 +69,7 @@ function App() {
   }, []);
 
   return (
-    <main className='calendar-container'>
+    <main>
       <FullCalendar
         className='p-mx-3 p-mt-6 p-mb-3 p-mx-md-6'
         options={fullCalendarOptions}

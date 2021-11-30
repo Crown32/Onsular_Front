@@ -24,12 +24,11 @@ export default function Home() {
           Onsular
         </Typography>
         <Typography className='titleSubtext' variant='h6'>
-          Seu mundo acadêmico em apenas um lugar
+          Seu ambiente acadêmico em apenas um lugar
         </Typography>
         <br></br>
         <Divider></Divider>
       </Container>
-
       <Grid container>
         <Grid className='calendarContainer' item xs='12' lg='6'>
           <Calendar></Calendar>
@@ -56,7 +55,23 @@ export default function Home() {
         </Grid>
       </Grid>
       <Graph></Graph>
-      <h1 sx={{ textAlign: "center" }}>Fóruns em aberto</h1>
+      <Container
+        sx={{
+          margin: "40px 0",
+        }}
+        maxWidth='xl'
+      >
+        <Typography
+          sx={{
+            marginLeft: "15px",
+          }}
+          variant='h4'
+        >
+          Fóruns em aberto
+        </Typography>
+        <br></br>
+        <Divider></Divider>
+      </Container>
       <Grid
         container
         className='forumCardsGrid'
@@ -67,9 +82,11 @@ export default function Home() {
           title='Trabalho de história - Capitalismo'
           openDate='01/12/2021'
           lastMessageDate='21/12/2022'
+          messageAmount='8'
         ></ForumsCardPersonal>
 
         <ForumsCardPersonal
+          messageAmount='2'
           title='Trabalho de geográfia - Urbanização'
           avatar='https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
         ></ForumsCardPersonal>
