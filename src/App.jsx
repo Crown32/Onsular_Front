@@ -10,6 +10,9 @@ import Calendar from "./pages/home/Calendar";
 import Home from "./pages/home/Home";
 import Activities from "./pages/activities/Activities";
 import Tests from "./pages/tests/Tests";
+import Footer from "./global/Footer";
+import Router from "./Router";
+
 //This function is a React Component, all components functions need to start with captilized letter
 export default function App() {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
@@ -18,10 +21,21 @@ export default function App() {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <Navbar></Navbar>
+      {window.location.href.includes("login") |
+      window.location.href.includes("register") ? (
+        ""
+      ) : (
+        <Navbar></Navbar>
+      )}
       <Container sx={appContainer} maxWidth='xl'>
-        <Home></Home>
+        <Router></Router>
       </Container>
+      {window.location.href.includes("login") |
+      window.location.href.includes("register") ? (
+        ""
+      ) : (
+        <Footer></Footer>
+      )}
     </ThemeProvider>
   );
 }
