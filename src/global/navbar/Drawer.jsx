@@ -86,7 +86,7 @@ export default function TemporaryDrawer() {
           </ListItem>
         </Link>
 
-        <Link to='/'>
+        <Link to='/forum'>
           <ListItem button key='Fórum'>
             <ListItemIcon>
               <MarkUnreadChatAltIcon></MarkUnreadChatAltIcon>

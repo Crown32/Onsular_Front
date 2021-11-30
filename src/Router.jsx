@@ -6,6 +6,7 @@ import Tests from "./pages/tests/Tests";
 import Register from "./pages/logins/Register";
 import Navbar from "./global/navbar/Navbar";
 import App from "./App";
+import Forum from "./pages/forum/Forum";
 
 export default function Router() {
   return (
@@ -17,6 +18,8 @@ export default function Router() {
           <Route path='activities' element={<Activities />} />
 
           <Route path='tests' element={<Tests />} />
+
+          <Route path='forum' element={<Forum />} />
         </Route>
 
         <Route path='/register' element={<Register />} />

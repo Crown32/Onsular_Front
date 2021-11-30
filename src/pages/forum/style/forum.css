@@ -1,0 +1,34 @@
+.str-chat-channel-list,
+.str-chat-channel {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.str-chat__container {
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.str-chat,
+.str-chat__channel-list-messenger {
+    border-radius: 10px;
+}
+
+str-chat__virtual-list::-webkit-scrollbar {
+    width: 20px;
+}
+
+str-chat__virtual-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+str-chat__virtual-list::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+str-chat__virtual-list::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
