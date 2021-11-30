@@ -13,11 +13,13 @@ import { Menubar } from "primereact/menubar";
 import { Calendar } from "@fullcalendar/core";
 import { FullCalendar } from "primereact/fullcalendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import brLocale from "@fullcalendar/core/locales/pt-br";
 
 function App() {
   const fullCalendarOptions = {
     plugins: [dayGridPlugin],
     defaultView: "dayGridMonth",
+    locale: brLocale,
   };
 
   const colors = {

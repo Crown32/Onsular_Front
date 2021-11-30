@@ -1,8 +1,9 @@
 .forumCard {
-    padding: 6px;
+    padding: 10px;
 }
 
 .forumCard .paper {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -14,7 +14,8 @@ export default function Copyright(props) {
       {"Copyright © "}
       <Link target='T_Blank' color='inherit' href='https://github.com/Crown32'>
         Onsular
-      </Link>{" "}
+      </Link>
+      {"⠀"}
       {new Date().getFullYear()}
       {"."}
     </Typography>

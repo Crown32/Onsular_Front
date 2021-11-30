@@ -34,6 +34,13 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
+  const copyrightStyle = {
+    position: "absolute",
+    bottom: "5%",
+    left: "0",
+    right: "0",
+  };
+
   const list = (anchor) => (
     <Box
       sx={{
@@ -112,7 +119,7 @@ export default function TemporaryDrawer() {
           className='drawer'
         >
           {list("left")}
-          <Copyright></Copyright>
+          <Copyright sx={copyrightStyle}></Copyright>
         </Drawer>
       </React.Fragment>
     </div>

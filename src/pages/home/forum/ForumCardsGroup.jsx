@@ -2,16 +2,24 @@ import { Grid, Paper, Avatar, AvatarGroup } from "@mui/material";
 import React from "react";
 import "./style/forumCards.css";
 import { Box } from "@mui/system";
+import { useState } from "react";
 
-export default function forumCardGroup({
+export default function ForumCardGroup({
   avatarList,
   title,
   openDate,
   lastMessageDate,
 }) {
+  const [elevation, setElevation] = useState(24);
+
   return (
     <Grid className='forumCard' item lg='6' sm='12'>
-      <Paper className='paper' elevation='12'>
+      <Paper
+        onMouseEnter={() => setElevation(6)}
+        onMouseLeave={() => setElevation(24)}
+        className='paper'
+        elevation={elevation}
+      >
         <AvatarGroup max='3'>
           <Avatar src={avatarList[0]}></Avatar>
           <Avatar src={avatarList[1]}></Avatar>

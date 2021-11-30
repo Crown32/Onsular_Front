@@ -87,11 +87,15 @@ export default function Home() {
 
         <ForumsCardPersonal
           messageAmount='2'
+          openDate='01/12/2021'
+          lastMessageDate='Ontem'
           title='Trabalho de geográfia - Urbanização'
           avatar='https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
         ></ForumsCardPersonal>
         <ForumsCardGroup
           title='Trabalho de Português - Grámatica'
+          openDate='01/12/2021'
+          lastMessageDate='Hoje'
           avatarList={[
             "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
             "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",

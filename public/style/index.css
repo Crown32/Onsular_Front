@@ -13,20 +13,3 @@ body {
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
-
-
-/* Globals */
-
-.copyright {
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-}
-
-
-/* Navbar */
-
-.drawer {
-    position: relative;
-}

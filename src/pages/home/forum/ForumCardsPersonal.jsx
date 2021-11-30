@@ -3,17 +3,25 @@ import { Box } from "@mui/system";
 import React from "react";
 import "./style/forumCards.css";
 import { Badge } from "@mui/material";
+import { useState } from "react";
 
-export default function forumCardPersonal({
+export default function ForumCardPersonal({
   avatar,
   title,
   openDate,
   lastMessageDate,
   messageAmount,
 }) {
+  const [elevation, setElevation] = useState(24);
+
   return (
     <Grid className='forumCard' item lg='6' sm='12'>
-      <Paper className='paper' elevation='12'>
+      <Paper
+        className='paper'
+        elevation={elevation}
+        onMouseEnter={() => setElevation(6)}
+        onMouseLeave={() => setElevation(24)}
+      >
         <Badge overlap='circular' badgeContent={messageAmount} color='success'>
           <Avatar src={avatar}></Avatar>
         </Badge>
