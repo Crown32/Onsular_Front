@@ -50,7 +50,7 @@ export default function Home() {
           ></Card>
 
           <Card
-            link='/'
+            link='/forum'
             name='Fórum'
             icon={<MarkUnreadChatAlt sx={mdIcon}></MarkUnreadChatAlt>}
           ></Card>
