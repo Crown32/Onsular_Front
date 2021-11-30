@@ -2,10 +2,15 @@
 
 :root {
     --primary-color: #1976d2;
+    --secondary-color: #0a2e52;
+    --tertiary-color: #5b9ad9;
+    --tertiary-color-darker: #223a52;
+    --secondary-color-lighter: #13599e;
     --background-color-light: #f0f7ff;
 }
 
 body {
+    min-height: 100vh;
     background-color: var(--background-color-light);
     box-sizing: border-box;
     margin: 0;

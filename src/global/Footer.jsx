@@ -3,15 +3,13 @@ import Copyright from "./Copyright";
 
 export default function Footer() {
   const style = {
-    display: "flex",
-    widht: "100%",
-    height: "40px",
-    justifyContent: "center",
-    alignItems: "center",
+    left: 0,
+    right: 0,
     padding: "20px 0",
     backgroundColor: "var(--primary-color)",
     position: "relative",
-    marginTop: "80px",
+    position: "absolute",
+    bottom: "-120px",
   };
   return (
     <div>
