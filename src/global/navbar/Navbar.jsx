@@ -16,6 +16,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import MyDrawer from "./Drawer";
+import { Link } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -160,14 +161,16 @@ export default function PrimarySearchAppBar() {
       <AppBar position='static'>
         <Toolbar>
           <MyDrawer></MyDrawer>
-          <Typography
-            variant='h6'
-            noWrap
-            component='div'
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            Onsular
-          </Typography>
+          <Link to='/'>
+            <Typography
+              variant='h6'
+              noWrap
+              component='div'
+              sx={{ display: { xs: "none", sm: "block" }, color: "white" }}
+            >
+              Onsular
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton

@@ -7,10 +7,13 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Badge, Container, Grid, Paper } from "@mui/material";
 import { Button } from "@mui/material";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
+import Stack from "@mui/material/Stack";
+import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 
 const Accordion = styled((props) => (
   <MuiAccordion
-    sx={{ marginBottom: "10px" }}
+    sx={{ marginBottom: "30px", borderRadius: "10px" }}
     disableGutters
     elevation={0}
     {...props}
@@ -27,16 +30,20 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "1.2rem" }} />}
+    expandIcon={
+      <ArrowForwardIosSharpIcon sx={{ fontSize: "1.2rem", color: "white" }} />
+    }
     {...props}
   />
 ))(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === "dark"
       ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
+      : "var(--secondary-color)",
   flexDirection: "row-reverse",
   width: "100%",
+  color: "white",
+  borderRadius: "10px",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
@@ -51,6 +58,12 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function GridAccordion({ course }) {
+  const lineCenter = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  };
+
   return (
     <Accordion defaultExpanded='true'>
       <Badge sx={{ width: "100%" }} badgeContent={4} color='primary'>
@@ -62,62 +75,98 @@ export default function GridAccordion({ course }) {
         <Grid container spacing='24'>
           <Grid xs='12' sm='6' lg='3' item>
             <Paper elevation='6' sx={{ padding: "10px", paddingTop: "1px" }}>
-              <h3>Atividade 1º semestre</h3>
-              <Typography>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eum
-                laudantium voluptate odit deleniti delectus deserunt animi totam
-                fugiat quod ipsam vitae illo iste, sunt necessitatibus velit
-                excepturi...
-              </Typography>
-              <br></br>
-              <Button variant='contained' color='success'>
-                Entregar atividade
-              </Button>
+              <Stack spacing={2}>
+                <h3>Atividade 1º semestre</h3>
+                <Typography>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <AttachFileIcon></AttachFileIcon>
+                  :Conteúdo.pdf
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <EventAvailableIcon></EventAvailableIcon>
+                  :22/03/2021
+                </Typography>
+                <br></br>
+                <Button variant='contained' color='success'>
+                  Entregar atividade
+                </Button>
+              </Stack>
             </Paper>
           </Grid>
           <Grid xs='12' sm='6' lg='3' item>
             <Paper elevation='6' sx={{ padding: "10px", paddingTop: "1px" }}>
-              <h3>Atividade 2º semestre</h3>
-              <Typography>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eum
-                laudantium voluptate odit deleniti delectus deserunt animi totam
-                fugiat quod ipsam vitae illo iste, sunt necessitatibus velit
-                excepturi...
-              </Typography>
-              <br></br>
-              <Button variant='contained' color='success'>
-                Entregar atividade
-              </Button>
+              <Stack spacing={2}>
+                <h3>Atividade 2º semestre</h3>
+                <Typography>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <AttachFileIcon></AttachFileIcon>
+                  :Gráfico.png
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <EventAvailableIcon></EventAvailableIcon>
+                  :30/01/2022
+                </Typography>
+                <br></br>
+                <Button variant='contained' color='success'>
+                  Entregar atividade
+                </Button>
+              </Stack>
             </Paper>
           </Grid>
           <Grid xs='12' sm='6' lg='3' item>
             <Paper elevation='6' sx={{ padding: "10px", paddingTop: "1px" }}>
-              <h3>Atividade 3º semestre</h3>
-              <Typography>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eum
-                laudantium voluptate odit deleniti delectus deserunt animi totam
-                fugiat quod ipsam vitae illo iste, sunt necessitatibus velit
-                excepturi...
-              </Typography>
-              <br></br>
-              <Button variant='contained' color='success'>
-                Entregar atividade
-              </Button>
+              <Stack spacing={2}>
+                <h3>Atividade 3º semestre</h3>
+                <Typography>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <AttachFileIcon></AttachFileIcon>
+                  :Auxiliar.pdf
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <EventAvailableIcon></EventAvailableIcon>
+                  :24/11/2022
+                </Typography>
+                <br></br>
+                <Button variant='contained' color='success'>
+                  Entregar atividade
+                </Button>
+              </Stack>
             </Paper>
           </Grid>
           <Grid xs='12' sm='6' lg='3' item>
             <Paper elevation='6' sx={{ padding: "10px", paddingTop: "1px" }}>
-              <h3>Atividade complementar</h3>
-              <Typography>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eum
-                laudantium voluptate odit deleniti delectus deserunt animi totam
-                fugiat quod ipsam vitae illo iste, sunt necessitatibus velit
-                excepturi...
-              </Typography>
-              <br></br>
-              <Button variant='contained' color='success'>
-                Entregar atividade
-              </Button>
+              <Stack spacing={2}>
+                <h3>Atividade Complementar</h3>
+                <Typography>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <AttachFileIcon></AttachFileIcon>
+                  :Guerra_dos_povos.pdf
+                </Typography>
+
+                <Typography sx={lineCenter}>
+                  <EventAvailableIcon></EventAvailableIcon>
+                  :--/--/----
+                </Typography>
+                <br></br>
+                <Button variant='contained' color='success'>
+                  Entregar atividade
+                </Button>
+              </Stack>
             </Paper>
           </Grid>
         </Grid>
